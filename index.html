@@ -1,0 +1,83 @@
+<head>
+	<meta charset="UTF-8">
+	<title>Brooke Leave Home</title>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display|Secular+One" rel="stylesheet">
+</head>
+
+<body>
+	<div class="story-wrapper">
+		<canvas id="story" class="story-canvas" width="1280" height="720" style="opacity: 0;"></canvas>
+		<div id="bank-balance" style="opacity: 0">
+			<div id="bank-balance-change">
+				<table id="expenses-table">
+					<tr><td class="expenses-item" style="opacity 0"> </td></tr>
+					<tr><td class="expenses-item" style="opacity 0"> </td></tr>
+					<tr><td class="expenses-item" style="opacity 0"> </td></tr>
+					<tr><td class="expenses-item" style="opacity 0"> </td></tr>
+					<tr><td class="expenses-item" style="opacity 0"> </td></tr>
+					<tr><td class="expenses-item" style="opacity 0"> </td></tr>
+				</table>
+			</div>
+			<div id="bank-balance-block">
+					<span>£<span id="bank-balance-label">0</span></span>
+			</div>
+		</div>
+		<div id="textOverlay" style="opacity: 0; user-select: none" />
+	</div>
+
+	<div id="splash-screen">
+		<video id="splash-background-video" autoplay muted loop playsinline>
+			<source src="./splash-low.mp4" type="video/mp4"> 
+		</video>
+		<div id="splash-overlay">    
+			<div id="splash-title">BROOKE LEAVE HOME</div>
+			<div id="splash-subtitle">One Care Leaver's Stories of the Next Step.</div>
+			<button id="splash-button" class="button" onclick="hideSplash()">Start</button>
+			<div id="adblockWarning" style="display:none; color:red">Please disable adblocking software (e.g. uBlock Origin) to continue.<br />If this doesn't fix the problem, please email shauna.concannon@york.ac.uk.</div>
+		</div>
+	</div>
+
+	<div id="map-page" style="opacity: 0; display: none">
+		<div id="map-header-block">
+			<div id="map-heading">
+				Things might have been different if Brooke lived elsewhere
+			</div>
+			<div id="map-sub-heading">
+				Choose a location on the map to re-watch the film based on data from another area
+			</div>
+		</div>
+		<div id="map-main-container">
+			<div id="map-data-container">
+				<div id="map-data-background">
+					<div id="map-label">York</div>
+					<div class="data-heading">
+						Number of care leavers:
+						<div class="data-label"><span id="num-leavers-data-label">1000</span></div>
+						<!--<span class="comparison-label">&nbsp;</span>-->
+					</div>
+					<div class="data-heading">
+						Setting up home grant:
+						<div class="data-label">£<span id="shg-data-label">1000</span></div>
+						<span class="comparison-label" id="shg-comparison-label">&nbsp;</span>
+					</div>
+					<div class="data-heading">
+						Council tax:
+						<div class="data-label" id="tax-data-label">Exempt</div>
+						<span class="comparison-label" id="tax-comparison-label">&nbsp;</span>
+					</div>
+					<button id="rewatch-button" class="button" onclick="rewatch()">Watch from Here</button>
+				</div>
+			</div>
+			<div id="map-container">
+				<div id="map"></div>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script src="./lib/OBBEngine.js"></script>
+<script src="./lib/FunctionsModule.js"></script>
+<script src="./lib/EngineModule.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.3.0/d3.min.js"></script>
+<script src="./script.js"></script>
