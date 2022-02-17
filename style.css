@@ -149,6 +149,15 @@ button:disabled
 	font-family: 'Open Sans', sans-serif;
 }
 
+#splash-browser-warning
+{
+	padding: 10px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: lighter;
+	font-size: small;
+	background: rgba(250, 250, 250, 0.6);
+}
+
 @media (orientation: portrait) 
 {
 	#splash-subtitle

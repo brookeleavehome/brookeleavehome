@@ -123,6 +123,22 @@ async function logNewView()
 	}
 }
 
+/** Browser detection */
+function checkCompatibleBrowserAndDevice()
+{
+	let userAgent = navigator.userAgent;
+	let browserWarn = document.querySelector('#splash-browser-warning');
+
+	if(userAgent.includes("Chrome"))
+	{
+		browserWarn.display = 'none';
+	}
+	else
+	{
+		browserWarn.display = 'block';
+	}
+}
+
 /** Interactive map and geo-location **/
 function locationSelected()
 {
@@ -706,6 +722,7 @@ window.onload = function()
 	let urlParams = new URLSearchParams(window.location.search);
 
 	getLocation();
+	checkCompatibleBrowserAndDevice();
 
 	if(urlParams.has('rw'))
 	{
