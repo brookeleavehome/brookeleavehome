@@ -127,15 +127,16 @@ async function logNewView()
 function checkCompatibleBrowserAndDevice()
 {
 	let userAgent = navigator.userAgent;
+	let isMobile = navigator.userAgentData.mobile;
 	let browserWarn = document.querySelector('#splash-browser-warning');
 
-	if(userAgent.includes("Chrome"))
+	if(!userAgent.includes("Chrome") || isMobile)
 	{
-		browserWarn.style.display = 'none';
+		browserWarn.style.display = 'block';
 	}
 	else
 	{
-		browserWarn.style.display = 'block';
+		browserWarn.style.display = 'none';
 	}
 }
 
