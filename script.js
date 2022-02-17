@@ -131,11 +131,11 @@ function checkCompatibleBrowserAndDevice()
 
 	if(userAgent.includes("Chrome"))
 	{
-		browserWarn.display = 'none';
+		browserWarn.style.display = 'none';
 	}
 	else
 	{
-		browserWarn.display = 'block';
+		browserWarn.style.display = 'block';
 	}
 }
 
