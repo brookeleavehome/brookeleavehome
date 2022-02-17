@@ -137,13 +137,6 @@ button:disabled
 	color: #181818;
 }
 
-#location-input:focus
-{
-	outline: none;
-	margin: -1px;
-}
-
-
 #splash-button
 {
 	height: 50px;

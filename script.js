@@ -183,6 +183,17 @@ async function getLocation()
 	}
 }
 
+function getLaColourFromData(laCode)
+{
+	let laData = all_data[laCode];
+	if(laData == undefined || laData['Shg_2011'] == 0)
+	{
+		return 'rgba(128, 128, 128, 1.0)';
+	}
+
+	return 'rgba(0, 140, 186, 1.0)';
+}
+
 async function loadDataFile()
 {
 	let locationList = document.querySelector('#locations');
@@ -209,21 +220,8 @@ async function loadDataFile()
    			locationList.appendChild(option);
 		}
 	}
-}
-loadDataFile();
 
-function getLaColourFromData(laCode)
-{
-	let laData = all_data[laCode];
-	if(laData == undefined || laData['Shg_2011'] == 0)
-	{
-		return 'rgba(128, 128, 128, 1.0)';
-	}
-
-	return 'rgba(0, 140, 186, 1.0)';
-}
-
-let map = d3.select('#map').append('svg')
+	let map = d3.select('#map').append('svg')
 	.attr('style', 'height: auto; width: 100%;')
 	.attr('viewBox', `0 0 ${mapRelativeWidth} ${mapRelativeHeight}`)
 
@@ -308,7 +306,9 @@ d3.json('england.geojson', function (geojson) {
 		})
 		.append('svg:title')
 			.text(d => d.properties.lad17nm)
-})
+	})
+}
+loadDataFile();
 
 async function startExperience() 
 {
