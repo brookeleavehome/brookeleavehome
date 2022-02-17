@@ -33,12 +33,11 @@
 		<div id="splash-overlay">    
 			<div id="splash-title">BROOKE LEAVE HOME</div>
 			<div id="splash-subtitle">One Care Leaver's Stories of the Next Step.</div>
-			<div id="splash-location-container">
-				<input list="locations" id="location-input" placeholder="Choose a location in England..." onchange="locationSelected()"></input>
-				<datalist id="locations"></datalist>	
-				<button onclick="getLocation()">Locate</button>		
+			<div id="splash-start-container">
+				<input list="locations" id="location-input" placeholder="Choose a location..." onchange="locationSelected()"></input>
+				<datalist id="locations"></datalist>
+				<button id="splash-button" class="button" onclick="hideSplash()" disabled>Watch from Here</button>
 			</div>
-			<button id="splash-button" class="button" onclick="hideSplash()" disabled>Watch from Here</button>
 			<div id="splash-description">
 				Brooke Leave Home is a storytelling experiment exploring the representation of data using a personalised interactive film. You can find out more about the film and our research <a href="">here</a>.
 			</div>

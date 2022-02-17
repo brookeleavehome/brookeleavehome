@@ -705,6 +705,8 @@ window.onload = function()
 {
 	let urlParams = new URLSearchParams(window.location.search);
 
+	getLocation();
+
 	if(urlParams.has('rw'))
 	{
 		rewatchEnabled = urlParams.get('rw') == 'true';
