@@ -19,6 +19,7 @@ let essentials = undefined;
 let luxuries = undefined;
 let whiteGoods = undefined;
 let currentVal = 0;
+let selectedCode = undefined;
 
 /** Logging **/
 async function logViewingComplete()
@@ -123,8 +124,69 @@ async function logNewView()
 }
 
 /** Interactive map and geo-location **/
+function locationSelected()
+{
+	let locInput = document.querySelector('#location-input').value;
+	let splashButton = document.querySelector('#splash-button');
+
+	let keys = Object.keys(all_data);
+	for(let i = 0; i < keys.length; i++)
+	{
+		let item = all_data[keys[i]];
+
+		if(item.Local_authority === locInput)
+		{
+			selectedCode = item.LA_code;
+			splashButton.disabled = false;
+
+			console.log("Starting with location: " + selectedCode);
+			console.log(all_data[selectedCode]);
+			return;
+		}
+	}
+	splashButton.disabled = true;
+}
+
+async function getLocation()
+{
+	try 
+	{
+		let postcodeData = await (await fetch('https://ipapi.co/json/')).json();
+
+		// HACK: usinhg postcode for local dev!
+		let locationData = await (await fetch('https://api.postcodes.io/postcodes?q=' + postcodeData['postal'])).json();
+
+		console.log(locationData);
+
+		let _lacode = locationData['result'][0].codes['admin_district'];
+		let _laname = locationData['result'][0].admin_district;
+
+		let keys = Object.keys(all_data);
+		if(keys.includes(_lacode) && all_data[_lacode].Shg_2011 != 0)
+		{
+			console.log("found valid location");
+			document.querySelector('#location-input').value = _laname;
+
+			locationSelected();
+		}
+		else
+		{
+			console.log("location invalid");
+		}
+
+		// TODO: test with lat/lon
+		//let locationData = await (await fetch('https://api.postcodes.io/postcodes?&limit=1&lat=' + coords['latitude'] + '&lon=' + coords['longitude'])).json();
+	}
+	catch(error)
+	{
+		console.error(error);
+	}
+}
+
 async function loadDataFile()
 {
+	let locationList = document.querySelector('#locations');
+
 	let rawData = (await (await fetch('data.csv')).text()).split('\r\n');
 	let headers = rawData[0].split(',');
 	all_data = new Object();
@@ -139,6 +201,13 @@ async function loadDataFile()
 		}
 
 		all_data[cols[0]] = entry;
+
+		if(entry.Shg_2011 != 0)
+		{
+			let option = document.createElement('option');
+   			option.value = entry.Local_authority;
+   			locationList.appendChild(option);
+		}
 	}
 }
 loadDataFile();
@@ -264,58 +333,7 @@ async function startExperience()
 	}
 	else
 	{
-		let adBlockFail = false;
-		try 
-		{
-			const {latitude:lat,longitude:lon} = await (await fetch('https://ipapi.co/json/')).json()
-			;({result:[{admin_district:name,codes:{admin_district:code}}]} = await (await fetch(`https://api.postcodes.io/postcodes?&limit=1&lat=${lat}&lon=${lon}`)).json())
-
-			if (!code || code[0] !== 'E') 
-			{
-				code = undefined;
-				throw new Error()
-			}
-			else
-			{
-				actualLocation = code;
-			}
-		} 
-		catch (error) 
-		{
-			adBlockFail = true;
-			code = undefined;
-			console.warn(error);
-		}
-
-		if(adBlockFail)
-		{
-			document.querySelector('#adblockWarning').style.display = 'block';
-			
-			// HACK: return early to stop production actually starting if API call fails
-			return;
-		}
-
-		if(local && code != undefined && (all_data[code]['Shg_2011'] == 0))
-		{
-			local = false;
-		}
-
-		if(!local || code == undefined)
-		{
-			while(true)
-			{
-				let laCodes = Object.keys(all_data);
-				let random = Math.floor(Math.random() * laCodes.length);
-				let randomCode = laCodes[random];
-			
-				// reject if we know where we are the random code is our location
-				if(((!local && code != undefined) && randomCode != code) && (all_data[randomCode]['Shg_2011'] != 0))
-				{
-					code = randomCode;
-					break;
-				}
-			}
-		}
+		code = selectedCode;
 	}
 
 	// try to reduce memory use by destroying splash video
@@ -326,6 +344,7 @@ async function startExperience()
 	document.querySelector('#splash-screen').style.opacity = 0;
 
 	la_data = all_data[code];
+
 	logNewView();
 
 	// load data files
