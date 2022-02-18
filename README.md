@@ -5,11 +5,15 @@ The film was created as as a storytelling experiment as part of the [EPSRC Persp
 
 You can find out more about the film, why it is designed the way it is and, crucially, what audiences thought of it in a research study in this [research paper](./docs/blh_preprint.pdf). You can also find out about other interactive videos that have included data in related ways [in this paper](./docs/pm_preprint.pdf).
 
+## What do you mean when you say personalized film?
+
+The film tells the story of Brooke, a fictional care leaver as she begins life on her own in the months following her 18th birthday. A key feature of the film is that, while all viewers see a story progressing through the same acts, the content and narrative structure shown within them changes depending on data about care leaver support in the viewer’s local authority area. 
 
 ## What data sources is the film based on?
 
+The film adapts it's content and structure 
 
-## Who made Brooke Leave Home?
+## Who made this?
 
 
 ## What technology did we use?
