@@ -31,6 +31,7 @@ Brooke Leave Home was created by the following people:
 - Parthiv Shah
 - [Marian Ursu](https://www.york.ac.uk/tfti/staff/academic/marian-ursu/)
 - [John Gray](https://digitalcreativity.ac.uk/people/john-gray)
+- Ilze Panko
 
 Brooke was played by the following people:
 - NAME (as Brooke)
