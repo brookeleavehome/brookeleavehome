@@ -154,7 +154,7 @@ button:disabled
 	padding: 10px;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: lighter;
-	font-size: small;
+	font-size: medium;
 	background: rgba(250, 250, 250, 0.6);
 }
 
