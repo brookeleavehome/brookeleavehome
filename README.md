@@ -1,7 +1,5 @@
 # What is Brooke Leave Home?
-Brooke Leave Home is a personalized film designed to engage a non-expert audience with open data about the support young adults receive when leaving the care system in England. The film draws upon a range of video-based data storytelling techniques to present each viewer with a personalized perspective on the topic based on data from their own local area.
-
-You can [watch the film here](http://brookeleavehome.github.io).
+Brooke Leave Home is a personalized film designed to engage a non-expert audience with open data about the support young adults receive when leaving the care system in England. The film draws upon a range of video-based data storytelling techniques to present each viewer with a personalized perspective on the topic based on data from their own local area. You can [watch the film here](http://brookeleavehome.github.io) (we reccomend you use Chrome on a desktop or laptop computer).
 
 The film was created as as a storytelling experiment as part of the [EPSRC Perspective Media project](https://gtr.ukri.org/projects?ref=EP%2FR010919%2F1) at the University of York's [Digital Creativity Labs](http://www.digitalcreativity.ac.uk). This project investigated whether personalised video stories could be used to presenting data sources to the public in a way that a large and diverse section of the population would be able to, and equally crucially, want to use.
 
@@ -40,4 +38,4 @@ Brooke was played by the following people:
 
 ## What technology did we use?
 
-The film was created using the Cutting Room interactive film authoring toolkit. The current Unity-based version of Cutting Room is available as an open source project at [this repository](https://github.com/Digital-Creativity-Labs/CuttingRoom/). For Brooke Leave Home, we used an older HTML5-based version of the toolkit this isn't currently available. However, if you are interested in using this version of the toolkit then please do [get in contact](mailto:jonathab.hook@york.ac.uk). 
+The film was created using the Cutting Room interactive film authoring toolkit. The current Unity-based version of Cutting Room is available as an open source project at [this repository](https://github.com/Digital-Creativity-Labs/CuttingRoom/). For Brooke Leave Home, we used an older HTML5-based version of the toolkit this isn't currently available. However, if you are interested in using this version of the toolkit then please do [get in contact](mailto:jonathab.hook@york.ac.uk).
