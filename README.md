@@ -24,11 +24,13 @@ It's important to note that the situation illustrated by these data sources may 
 ## Who made this?
 
 Brooke Leave Home was created by the following people:
-- Shauna Concannon
+- [Shauna Concannon](https://shaunaconcannon.co.uk)
 - Tash Rajan
-- Jonathan Hook
+- [Jonathan Hook](http://www.jonhook.co.uk)
+- [Davy Smith](https://paper-boy.org)
 - Parthiv Shah
-- ADDITIONAL STUDENT FILM
+- [Marian Ursu](https://www.york.ac.uk/tfti/staff/academic/marian-ursu/)
+- [John Gray](https://digitalcreativity.ac.uk/people/john-gray)
 
 Brooke was played by the following people:
 - NAME (as Brooke)
