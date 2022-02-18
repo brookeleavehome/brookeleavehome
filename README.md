@@ -14,9 +14,9 @@ The film tells the story of Brooke, a fictional care leaver as she begins life o
 The film adapts it's content and structure based on [data](./data) from the following sources]:
 
 - Number of care leavers in England by local authority (source: Children's Society)
-- Setting up home grant amount received by care leavers by local authority (source: Children and Young People Now)
-- Estimated care leaver setting up home cost based on itemized basket of goods (source: Care Leavers' Foundation)
-- Availability of council tax exemption for care leavers under 25 by local authority (source: Children's Society)
+- Setting up home grant allowance by local authority (source: Children and Young People Now)
+- Estimated setting up home cost, itemized basket of goods (source: Care Leavers' Foundation)
+- Council tax exemption for care leavers by local authority (source: Children's Society)
 - Council tax rates by local authority (UK Government)
 
 It's important to note that the situation illustrated by these data sources may have changed since the film's production in 2019, and has in particular due to legislation that has brought the Setting Up Home Allowance amount given to care leavers across the country into alignment. Therefore, we ask that you view this film as a experimental prototype illustrating how a personalised film could be used to present data in a new way, rather than a currently accurate depiction of the financial support care leavers recieve.
