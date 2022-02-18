@@ -26,3 +26,4 @@ It's important to note that the situation illustrated by these data sources may 
 
 ## What technology did we use?
 
+The film was created using the Cutting Room interactive film authoring toolkit. The current Unity-based version of Cutting Room is available as an open source project at [this repository](https://github.com/Digital-Creativity-Labs/CuttingRoom/). For Brooke Leave Home, we used an older HTML5-based version of the toolkit this isn't currently available. However, if you are interested in using this version of the toolkit then please do [get in contact]. 
