@@ -215,7 +215,7 @@ async function loadDataFile()
 {
 	let locationList = document.querySelector('#locations');
 
-	let rawData = (await (await fetch('./media/data.csv')).text()).split('\r\n');
+	let rawData = (await (await fetch('./data/data.csv')).text()).split('\r\n');
 	let headers = rawData[0].split(',');
 	all_data = new Object();
 
@@ -365,9 +365,9 @@ async function startExperience()
 	logNewView();
 
 	// load data files
-	essentials = (await (await fetch('./media/essentials.csv')).text()).split(/\r?\n/);
-	luxuries = (await (await fetch('./media/luxuries.csv')).text()).split(/\r?\n/);
-	whiteGoods = (await (await fetch('./media/whiteGoods.csv')).text()).split(/\r?\n/);
+	essentials = (await (await fetch('./data/essentials.csv')).text()).split(/\r?\n/);
+	luxuries = (await (await fetch('./data/luxuries.csv')).text()).split(/\r?\n/);
+	whiteGoods = (await (await fetch('./data/whiteGoods.csv')).text()).split(/\r?\n/);
 
 	document.querySelector('#story').style.opacity = 1;
 	engine.initialise();
