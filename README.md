@@ -23,6 +23,16 @@ It's important to note that the situation illustrated by these data sources may 
 
 ## Who made this?
 
+Brooke Leave Home was created by the following people:
+- Shauna Concannon
+- Tash Rajan
+- Jonathan Hook
+- Parthiv Shah
+- ADDITIONAL STUDENT FILM
+
+Brooke was played by the following people:
+- NAME (as Brooke)
+- NAME (as Brooke's voice)
 
 ## What technology did we use?
 
