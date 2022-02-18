@@ -1,7 +1,5 @@
 # What is Brooke Leave Home?
-Brooke Leave Home is a personalized film designed to engage a non-expert audience with open data about the support young adults receive when leaving the care system in England. The film draws upon a range of video-based data storytelling techniques to present each viewer with a personalized perspective on the topic based on data from their own local area.
-
-You can [watch the film here](http://brookeleavehome.github.io). The film is tested to work with Google Chrome and only on laptop and desktop computers. Therefore, if it doens't seem to be working please try accessing it using these platforms.
+Brooke Leave Home is a personalized film designed to engage a non-expert audience with open data about the support young adults receive when leaving the care system in England. The film draws upon a range of video-based data storytelling techniques to present each viewer with a personalized perspective on the topic based on data from their own local area. You can [watch the film here](http://brookeleavehome.github.io) (we reccomend you use Chrome on a desktop or laptop computer).
 
 The film was created as as a storytelling experiment as part of the [EPSRC Perspective Media project](https://gtr.ukri.org/projects?ref=EP%2FR010919%2F1) at the University of York's [Digital Creativity Labs](http://www.digitalcreativity.ac.uk). This project investigated whether personalised video stories could be used to presenting data sources to the public in a way that a large and diverse section of the population would be able to, and equally crucially, want to use.
 
