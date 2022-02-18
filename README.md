@@ -7,7 +7,7 @@ You can find out more about the film, why it is designed the way it is and, cruc
 
 ## What do you mean when you say personalized film?
 
-The film tells the story of Brooke, a fictional care leaver as she begins life on her own in the months following her 18th birthday. A key feature of the film is that, while all viewers see a story progressing through the same acts, the content and narrative structure shown within them changes depending on data about care leaver support in the viewer’s local authority area. 
+The film tells the story of Brooke, a fictional care leaver as she begins life on her own in the months following her 18th birthday. A key feature of the film is that, while all viewers see a story progressing through the same acts, the content and narrative structure shown within them changes depending on data about care leaver support in the viewer’s local authority area. In short, what happens to Brooke in the film changes based on data about the location you choose from the drop down menu on the front page. In order to ensure that the the character of Brooke, her story and its relationship with the data sources included were con- structed in an authentic way, we collaborated with a local not-for-profit social enterprise with expertise in working with care leavers.
 
 ## What data sources is the film based on?
 
