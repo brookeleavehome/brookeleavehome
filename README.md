@@ -11,7 +11,10 @@ The film tells the story of Brooke, a fictional care leaver as she begins life o
 
 ## What data sources is the film based on?
 
-The film adapts it's content and structure 
+The film adapts it's content and structure based on data from the following sources. 
+
+
+It's important to note that the situation illustrated by these data sources may have changed since the film's production, and has in particular due to legislation that has brought the Setting Up Home Allowance amount given to care leavers across the country into alignment. Therefore, we ask that you view this film as a experimental prototype depicting how a personalised film could be used to present data in a new way, rather than a currently accurate depiction of the financial support care leavers recieve.
 
 ## Who made this?
 
