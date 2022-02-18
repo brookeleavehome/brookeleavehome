@@ -329,7 +329,6 @@ d3.json('./data/england.geojson', function (geojson) {
 			.text(d => d.properties.lad17nm)
 	})
 }
-loadDataFile();
 
 async function startExperience() 
 {
@@ -726,35 +725,37 @@ window.onload = function()
 {
 	let urlParams = new URLSearchParams(window.location.search);
 
-	getLocation();
-	checkCompatibleBrowserAndDevice();
-
-	if(urlParams.has('rw'))
+	loadDataFile().then(() => 
 	{
-		rewatchEnabled = urlParams.get('rw') == 'true';
-	}
-
-	if(urlParams.has('pid'))
-	{
-		pid = urlParams.get('pid');
-	}
-
-	if(urlParams.has('lk'))
-	{
-		loggingKey = urlParams.get('lk');
-	}
-
-	if(urlParams.has('local'))
-	{
-		local = urlParams.get('local') == 'true';
-	}
-
-	if(urlParams.has('skipSplash'))
-	{
-		startExperience();
-	}
-	else
-	{
-		showSplash();
-	}
+		if(urlParams.has('rw'))
+		{
+			rewatchEnabled = urlParams.get('rw') == 'true';
+		}
+	
+		if(urlParams.has('pid'))
+		{
+			pid = urlParams.get('pid');
+		}
+	
+		if(urlParams.has('lk'))
+		{
+			loggingKey = urlParams.get('lk');
+		}
+	
+		if(urlParams.has('local'))
+		{
+			local = urlParams.get('local') == 'true';
+		}
+	
+		if(urlParams.has('skipSplash'))
+		{
+			startExperience();
+		}
+		else
+		{
+			getLocation();
+			checkCompatibleBrowserAndDevice();
+			showSplash();
+		}
+	});
 };
