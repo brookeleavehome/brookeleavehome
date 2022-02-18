@@ -22,6 +22,10 @@ let currentVal = 0;
 let selectedCode = undefined;
 
 /** Logging **/
+/* NB. the film does not currently log any information about its users. 
+/* This logging functionality was for a research study, in which all users were aware of the data being captured and informed consent was sought and recorded.
+/* While the code is no longer used, I have left it in for reference and in case its useful for anyone.
+ */
 async function logViewingComplete()
 {
 	if(loggingKey != undefined)
