@@ -11,7 +11,7 @@ The film tells the story of Brooke, a fictional care leaver as she begins life o
 
 ## What data sources is the film based on?
 
-The film adapts it's content and structure based on [data](./data) from the following sources]:
+The film adapts it's content and structure based on [data](./data) from the following sources:
 
 - Number of care leavers in England by local authority (source: Children's Society)
 - Setting up home grant allowance by local authority (source: Children and Young People Now)
