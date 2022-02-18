@@ -26,7 +26,7 @@ async function logViewingComplete()
 {
 	if(loggingKey != undefined)
 	{
-		let query = 'logging.php';
+		let query = './logging/logging.php';
 		query += '?key=' + loggingKey;
 		query += '&method=viewComplete';
 		query += '&pk=' + pk;
@@ -50,7 +50,7 @@ async function logAtom(atom)
 		let atomId = atom.id;
 		let atomName = atom.flowPackage.url;
 
-		let query = 'logging.php';
+		let query = './logging/logging.php';
 		query += '?key=' + loggingKey;
 		query += '&method=newAtom';
 		query += '&pk=' + pk;
@@ -73,7 +73,7 @@ async function logNewRewatchClick(rw_data)
 {
 	if(loggingKey != undefined)
 	{
-		let query = 'logging.php';
+		let query = './logging/logging.php';
 		query += '?key=' + loggingKey;
 		query += '&method=newRewatchClick';
 		query += '&pk=' + pk;
@@ -99,7 +99,7 @@ async function logNewView()
 {
 	if(loggingKey != undefined)
 	{
-		let query = 'logging.php';
+		let query = './logging/logging.php';
 		query += '?key=' + loggingKey;
 		query += '&method=newView';
 		query += '&pid=' + pid;
