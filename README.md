@@ -34,7 +34,7 @@ Brooke Leave Home was created by the following people:
 
 Brooke was played by the following people:
 - Ilze Panko (as Brooke)
-- NAME (as Brooke's voice)
+- Charlotte Emerson (as Brooke's voice)
 
 ## What technology did we use?
 
