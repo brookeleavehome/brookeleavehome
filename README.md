@@ -6,8 +6,6 @@ Brooke Leave Home is a personalized film designed to engage a non-expert audienc
 ## What data sources is the film based on?
 
 
-
-
 ## Who made Brooke Leave Home?
 
 
