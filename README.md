@@ -19,7 +19,7 @@ The film adapts it's content and structure based on data from the following sour
 - Availability of council tax exemption for care leavers under 25 by local authority (source: Children's Society)
 - Council tax rates by local authority (UK Government)
 
-It's important to note that the situation illustrated by these data sources may have changed since the film's production in 2019, and has in particular due to legislation that has brought the Setting Up Home Allowance amount given to care leavers across the country into alignment. Therefore, we ask that you view this film as a experimental prototype depicting how a personalised film could be used to present data in a new way, rather than a currently accurate depiction of the financial support care leavers recieve.
+It's important to note that the situation illustrated by these data sources may have changed since the film's production in 2019, and has in particular due to legislation that has brought the Setting Up Home Allowance amount given to care leavers across the country into alignment. Therefore, we ask that you view this film as a experimental prototype illustrating how a personalised film could be used to present data in a new way, rather than a currently accurate depiction of the financial support care leavers recieve.
 
 ## Who made this?
 
