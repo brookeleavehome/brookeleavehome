@@ -38,4 +38,6 @@ Brooke was played by the following people:
 
 ## What technology did we use?
 
-The film was created using the Cutting Room interactive film authoring toolkit. The current Unity-based version of Cutting Room is available as an open source project at [this repository](https://github.com/Digital-Creativity-Labs/CuttingRoom/). For Brooke Leave Home, we used an older HTML5-based version of the toolkit that isn't currently available. However, if you are interested in using this version of the toolkit then please do [get in contact](mailto:jonathab.hook@york.ac.uk).
+The film was created using the Cutting Room interactive film authoring toolkit. The current Unity-based version of Cutting Room is available as an open source project at [this repository](https://github.com/Digital-Creativity-Labs/CuttingRoom/). For Brooke Leave Home, we used an older HTML/JS-based version of the toolkit that isn't currently available. However, if you are interested in using this version of the toolkit then please do [get in contact](mailto:jonathab.hook@york.ac.uk).
+
+The HTML/JS verison of Cutting Room used in this production uses the [BBC's Video Context Library](https://github.com/bbc/VideoContext) as its rendering API.
