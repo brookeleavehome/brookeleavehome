@@ -20,6 +20,7 @@ let luxuries = undefined;
 let whiteGoods = undefined;
 let currentVal = 0;
 let selectedCode = undefined;
+let browserChrome = false;
 
 /** Logging **/
 /* NB. the film does not currently log any information about its users. 
@@ -137,10 +138,12 @@ function checkCompatibleBrowserAndDevice()
 	if(!userAgent.includes("Chrome") || (isMobile.mobile != undefined && isMobile.mobile))
 	{
 		browserWarn.style.display = 'block';
+		browserChrome = false;
 	}
 	else
 	{
 		browserWarn.style.display = 'none';
+		browserChrome = true;
 	}
 }
 
@@ -242,6 +245,10 @@ async function loadDataFile()
 		}
 	}
 
+	essentials = (await (await fetch('./data/essentials.csv')).text()).split(/\r?\n/);
+	luxuries = (await (await fetch('./data/luxuries.csv')).text()).split(/\r?\n/);
+	whiteGoods = (await (await fetch('./data/whiteGoods.csv')).text()).split(/\r?\n/);
+
 	let map = d3.select('#map').append('svg')
 	.attr('style', 'height: auto; width: 100%;')
 	.attr('viewBox', `0 0 ${mapRelativeWidth} ${mapRelativeHeight}`)
@@ -330,7 +337,7 @@ d3.json('./data/england.geojson', function (geojson) {
 	})
 }
 
-async function startExperience() 
+function startExperience() 
 {
 	let code, name, data;
 	let urlParams = new URLSearchParams(window.location.search);
@@ -356,21 +363,15 @@ async function startExperience()
 		code = selectedCode;
 	}
 
-	// try to reduce memory use by destroying splash video
-	let videoElement = document.querySelector('#splash-background-video');
-	videoElement.parentNode.removeChild(videoElement);
-
-	document.querySelector('#splash-button').style.transition = '2s';	
-	document.querySelector('#splash-screen').style.opacity = 0;
-
 	la_data = all_data[code];
 
-	logNewView();
-
-	// load data files
-	essentials = (await (await fetch('./data/essentials.csv')).text()).split(/\r?\n/);
-	luxuries = (await (await fetch('./data/luxuries.csv')).text()).split(/\r?\n/);
-	whiteGoods = (await (await fetch('./data/whiteGoods.csv')).text()).split(/\r?\n/);
+	if(!browserChrome)
+	{
+		renderer.videoContext._videoElementCache._elements.forEach(element => 
+		{
+			element.muted = true;
+		});
+	}
 
 	document.querySelector('#story').style.opacity = 1;
 	engine.initialise();
@@ -379,9 +380,15 @@ async function startExperience()
 	renderer.videoContext.registerCallback("ended", function()
 	{
 		console.log("Playback ended");
-		//alert('end callback');
 		onFilmEnd();
 	});
+
+	// try to reduce memory use by destroying splash video
+	let videoElement = document.querySelector('#splash-background-video');
+	videoElement.parentNode.removeChild(videoElement);
+
+	document.querySelector('#splash-button').style.transition = '2s';	
+	document.querySelector('#splash-screen').style.opacity = 0;
 }
 
 /** Splash screen **/
@@ -391,7 +398,15 @@ function showSplash()
 }
 
 function hideSplash()
-{
+{	
+	/*if(!browserChrome)
+	{
+		renderer.videoContext._videoElementCache._elements.forEach(element => 
+		{
+			element.muted = true;
+		});
+	}*/
+
 	startExperience();
 }
 
